@@ -29,7 +29,7 @@ describe App do
 
     # it "displays the basketball team name in the browser" do
     #   visit '/newteam'
-     
+
     #   fill_in(:name, :with => "Bballers")
     #   click_button "Submit"
     #   expect(page).to have_text("Team Name: Bballers")
@@ -60,6 +60,15 @@ describe App do
     #   click_button "Submit"
 
     #   expect(page).to have_text("Shooting Guard: Joe")
+    # end
+
+    # it "displays the small forward's name in the browser" do
+    #   visit '/newteam'
+
+    #   fill_in(:sf, :with => "Ian")
+    #   click_button "Submit"
+
+    #   expect(page).to have_text("Small Forward: Ian")
     # end
 
     # it "displays the power forward's name in the browser" do
