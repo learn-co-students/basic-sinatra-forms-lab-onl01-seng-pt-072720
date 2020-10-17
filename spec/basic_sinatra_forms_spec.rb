@@ -29,7 +29,7 @@ describe App do
 
     it "displays the basketball team name in the browser" do
       visit '/newteam'
-
+     
       fill_in(:name, :with => "Bballers")
       click_button "Submit"
       expect(page).to have_text("Team Name: Bballers")
