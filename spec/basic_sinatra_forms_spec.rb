@@ -20,65 +20,76 @@ describe App do
   end
 
   describe 'POST /team' do
-    it 'does not return Sinatra error page' do
-      visit '/newteam'
+    # it 'does not return Sinatra error page' do
+    #   visit '/newteam'
 
-      click_button "Submit"
-      expect(page).to_not have_text("Backtrace")
-    end
+    #   click_button "Submit"
+    #   expect(page).to_not have_text("Backtrace")
+    # end
 
     it "displays the basketball team name in the browser" do
       visit '/newteam'
 
-      fill_in(:name, :with => "Bballers")
-      click_button "Submit"
-      expect(page).to have_text("Team Name: Bballers")
+      fill_in(:name, :with => "Brooklyn Nets")
+      click_button "submit"
+      expect(page).to have_text("Team Name: Brooklyn Nets")
     end
 
     it "displays the coach's name in the browser" do
       visit '/newteam'
 
-      fill_in(:coach, :with => "Walter")
-      click_button "Submit"
+      fill_in(:coach, :with => "Louis Armstrong")
+      click_button "submit"
 
-      expect(page).to have_text("Coach: Walter")
+      expect(page).to have_text("Coach: Louis Armstrong")
     end
 
     it "displays the point guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pg, :with => "Jeff")
-      click_button "Submit"
+      fill_in(:pg, :with => "Ella Fitzgerald")
+      click_button "submit"
 
-      expect(page).to have_text("Point Guard: Jeff")
+      expect(page).to have_text("Point Guard: Ella Fitzgerald")
     end
 
     it "displays the shooting guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Joe")
-      click_button "Submit"
+      fill_in(:sg, :with => "Miles Davis")
+      click_button "submit"
 
-      expect(page).to have_text("Shooting Guard: Joe")
+      expect(page).to have_text("Shooting Guard: Miles Davis")
     end
+
+
+    it "displays the small forward's name in the browser" do
+      visit '/newteam'
+
+      fill_in(:sf, :with => "Dave Brubeck")
+      click_button "submit"
+
+      expect(page).to have_text("Small Forward: Dave Brubeck")
+    end
+
 
     it "displays the power forward's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pf, :with => "Danny")
-      click_button "Submit"
+      fill_in(:pf, :with => "John Coltrane")
+      click_button "submit"
 
-      expect(page).to have_text("Power Forward: Danny")
+      expect(page).to have_text("Power Forward: John Coltrane")
     end
 
 
     it "displays the center's name in the browser" do
       visit '/newteam'
 
-      fill_in(:c, :with => "Avi")
-      click_button "Submit"
+      fill_in(:c, :with => "Sonny Rollins")
+      click_button "submit"
 
-      expect(page).to have_text("Center: Avi")
+      expect(page).to have_text("Center: Sonny Rollins")
     end
   end
 end
